@@ -23,6 +23,9 @@ app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
 
+app.get('/', async (req, res) => {
+  res.send('Hello, World!');
+})
 
 // Route to get all posts for a given user
 app.get('/users-posts/:id', async (req, res) => {
